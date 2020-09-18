@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 })
 export class AuthenticationService {
 
-  // BASE_PATH: 'http://localhost:8080'
+  // BASE_PATH: 'http://glucontrol.pedroazzam.me:8080'
   USER_NAME_SESSION_ATTRIBUTE_NAME = 'authenticatedUser'
 
   public username: String;
@@ -18,7 +18,7 @@ export class AuthenticationService {
   }
 
   authenticationService(username: String, password: String) {
-    return this.http.get('http://localhost:8080/api/v1/basicauth',
+    return this.http.get('http://glucontrol.pedroazzam.me:8080/api/v1/basicauth',
       { headers: { authorization: this.createBasicAuthToken(username, password) } }).pipe(map((res) => {
         this.username = username;
         this.password = password;
