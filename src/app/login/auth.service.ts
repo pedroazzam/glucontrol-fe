@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class AuthenticationService {
 
   // BASE_PATH: 'http://glucontrol.pedroazzam.me:8080'
   USER_NAME_SESSION_ATTRIBUTE_NAME = 'authenticatedUser'
