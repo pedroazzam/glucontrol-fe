@@ -11,12 +11,12 @@ export class HelloWorldService {
     }
     executeHelloWorldService() {
         console.log('Passou aqui executeHelloWorldService inicio');
-        return this.http.get<MessageModel>('http://glucontrol.pedroazzam.me:8080/api/v1/greeting');
+        return this.http.get<MessageModel>('http://localhost:8080/api/v1/greeting');
     }
 
     executeHelloWorldService2() {
         console.log('Passou aqui executeHelloWorldService2 inicio');
-        return this.http.get('http://glucontrol.pedroazzam.me:8080/api/admin/user/all');
+        return this.http.get('http://localhost:8080/api/admin/user/all');
     }
     
 }

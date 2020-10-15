@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../login/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HelloWorldService } from '../hello-world.service';
+import { UserListComponent } from '../user-list/user-list.component';
 
 @Component({
   selector: 'app-menu',
@@ -12,11 +13,13 @@ export class MenuComponent implements OnInit {
 
   isLoggedIn = false;
   welcomeMessage = '';
+  userList: UserListComponent
 
   constructor(private route: ActivatedRoute,
     private router: Router,
     public authenticationService: AuthenticationService,
-    private helloWorldService: HelloWorldService
+    private helloWorldService: HelloWorldService,
+    //public userList: UserListComponent,
     ) { }
 
   ngOnInit() {
@@ -46,6 +49,11 @@ export class MenuComponent implements OnInit {
 
   handleUN(){
     console.log(this.authenticationService.getLoggedInUserName());
+  }
+
+  handleUsers(){
+    console.log('Passo aqui handleUsers')
+    this.router.navigate(['/users']);
   }
 
 }

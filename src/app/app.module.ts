@@ -11,6 +11,8 @@ import { HelloWorldService } from './hello-world.service';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { HttpInterceptorService } from './http-interceptor.service';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserFormComponent } from './user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { HttpInterceptorService } from './http-interceptor.service';
     HelloWorldComponent,
     MenuComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    UserListComponent,
+    UserFormComponent,
   ],
   imports: [
     BrowserModule,
